@@ -17,11 +17,7 @@ This project provides a production-ready, real-time inference server based on **
 ## 效果演示 (Demo)
 
 下面是本项目运行时的实际效果，展示了从**空闲待机流**到**接收任务**，再到**平滑过渡**并开始**实时推理**的全过程。
-
-[![Demo Video](https://github.com/nxneo/LatentsyncRealtime/blob/main/video_0801_1.png)](https://github.com/nxneo/LatentsyncRealtime/blob/main/video_0801_1.mp4)
-
-*(点击上方图片跳转观看演示视频 | Click the image above to watch the demo video)*
-
+<center><video src=https://github.com/user-attachments/assets/9af5cc82-4da8-4cea-9b52-abc6c28ae69f controls preload></video></center>
 ---
 
 ## 主要功能 (Core Features)
