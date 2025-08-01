@@ -1,0 +1,423 @@
+2025-07-21 06:07:42,935 - __main__ - INFO - Flask service starting...
+2025-07-21 06:07:42,935 - __main__ - INFO - Models will be loaded on the first '/start_stream' request.
+2025-07-21 06:07:43,251 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://117.74.66.188:5000
+2025-07-21 06:07:43,251 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-21 06:08:30,389 - __main__ - INFO - Flask service starting...
+2025-07-21 06:08:30,390 - __main__ - INFO - Models will be loaded on the first '/start_stream' request.
+2025-07-21 06:08:30,509 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://117.74.66.188:5000
+2025-07-21 06:08:30,509 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-21 06:10:50,228 - __main__ - INFO - Flask service starting...
+2025-07-21 06:10:50,228 - __main__ - INFO - Models will be loaded on the first '/start_stream' request.
+2025-07-21 06:10:50,518 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://117.74.66.188:5000
+2025-07-21 06:10:50,518 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-21 06:10:54,581 - __main__ - INFO - Received request to start streaming to: rtmp://117.74.66.190:1935/dash/latentsync_video
+2025-07-21 06:10:54,581 - __main__ - INFO - Acquired model lock. Loading models...
+2025-07-21 06:10:54,599 - __main__ - INFO - Configuration loaded from: configs/unet/second_stage.yaml
+2025-07-21 06:11:04,987 - __main__ - INFO - xformers enabled.
+2025-07-21 06:11:05,029 - __main__ - INFO - All models loaded and pipeline created successfully.
+2025-07-21 06:11:05,029 - __main__ - ERROR - Failed to start streaming service: Missing key fps
+    full_key: data.fps
+    object_type=dict
+Traceback (most recent call last):
+  File "/data0/projects/LatentSync10/liveapp.py", line 121, in start_stream_api
+    video_fps=config.data.fps
+  File "/data0/anaconda3/envs/latentsync/lib/python3.10/site-packages/omegaconf/dictconfig.py", line 355, in __getattr__
+    self._format_and_raise(
+  File "/data0/anaconda3/envs/latentsync/lib/python3.10/site-packages/omegaconf/base.py", line 231, in _format_and_raise
+    format_and_raise(
+  File "/data0/anaconda3/envs/latentsync/lib/python3.10/site-packages/omegaconf/_utils.py", line 899, in format_and_raise
+    _raise(ex, cause)
+  File "/data0/anaconda3/envs/latentsync/lib/python3.10/site-packages/omegaconf/_utils.py", line 797, in _raise
+    raise ex.with_traceback(sys.exc_info()[2])  # set env var OC_CAUSE=1 for full trace
+  File "/data0/anaconda3/envs/latentsync/lib/python3.10/site-packages/omegaconf/dictconfig.py", line 351, in __getattr__
+    return self._get_impl(
+  File "/data0/anaconda3/envs/latentsync/lib/python3.10/site-packages/omegaconf/dictconfig.py", line 442, in _get_impl
+    node = self._get_child(
+  File "/data0/anaconda3/envs/latentsync/lib/python3.10/site-packages/omegaconf/basecontainer.py", line 73, in _get_child
+    child = self._get_node(
+  File "/data0/anaconda3/envs/latentsync/lib/python3.10/site-packages/omegaconf/dictconfig.py", line 480, in _get_node
+    raise ConfigKeyError(f"Missing key {key!s}")
+omegaconf.errors.ConfigAttributeError: Missing key fps
+    full_key: data.fps
+    object_type=dict
+2025-07-21 06:11:05,032 - werkzeug - INFO - 127.0.0.1 - - [21/Jul/2025 06:11:05] "[35m[1mPOST /start_stream HTTP/1.1[0m" 500 -
+2025-07-21 06:16:44,517 - __main__ - INFO - Flask service starting...
+2025-07-21 06:16:44,517 - __main__ - INFO - Models will be loaded on the first '/start_stream' request.
+2025-07-21 06:16:44,613 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://117.74.66.188:5000
+2025-07-21 06:16:44,613 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-21 06:16:48,737 - __main__ - INFO - Received request to start streaming to: rtmp://117.74.66.190:1935/dash/latentsync_video
+2025-07-21 06:16:48,737 - __main__ - INFO - Acquired model lock. Loading models...
+2025-07-21 06:16:48,754 - __main__ - INFO - Configuration loaded from: configs/unet/second_stage.yaml
+2025-07-21 06:16:58,475 - __main__ - INFO - xformers enabled.
+2025-07-21 06:16:58,514 - __main__ - INFO - All models loaded and pipeline created successfully.
+2025-07-21 06:16:58,515 - __main__ - ERROR - Failed to start streaming service: 'LipsyncPipeline' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "/data0/projects/LatentSync10/liveapp.py", line 117, in start_stream_api
+    live_manager = LiveStreamingManager(
+  File "/data0/projects/LatentSync10/live_streaming_manager.py", line 52, in __init__
+    self.logger = self.pipeline.logger
+AttributeError: 'LipsyncPipeline' object has no attribute 'logger'
+2025-07-21 06:16:58,518 - werkzeug - INFO - 127.0.0.1 - - [21/Jul/2025 06:16:58] "[35m[1mPOST /start_stream HTTP/1.1[0m" 500 -
+2025-07-21 06:23:51,029 - __main__ - INFO - Flask service starting...
+2025-07-21 06:23:51,029 - __main__ - INFO - Models will be loaded on the first '/start_stream' request.
+2025-07-21 06:23:51,146 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://117.74.66.188:5000
+2025-07-21 06:23:51,146 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-21 06:23:56,945 - __main__ - INFO - Received request to start streaming to: rtmp://117.74.66.190:1935/dash/latentsync_video
+2025-07-21 06:23:56,945 - __main__ - INFO - Acquired model lock. Loading models...
+2025-07-21 06:23:56,964 - __main__ - INFO - Configuration loaded from: configs/unet/second_stage.yaml
+2025-07-21 06:24:06,588 - __main__ - INFO - xformers enabled.
+2025-07-21 06:24:06,618 - __main__ - INFO - All models loaded and pipeline created successfully.
+2025-07-21 06:24:06,618 - __main__ - ERROR - Failed to start streaming service: 'LiveStreamingManager' object has no attribute 'logger'
+Traceback (most recent call last):
+  File "/data0/projects/LatentSync10/liveapp.py", line 127, in start_stream_api
+    live_manager.start()
+  File "/data0/projects/LatentSync10/live_streaming_manager.py", line 62, in start
+    self.logger.info("Starting Live Streaming Manager...")
+AttributeError: 'LiveStreamingManager' object has no attribute 'logger'
+2025-07-21 06:24:06,620 - werkzeug - INFO - 127.0.0.1 - - [21/Jul/2025 06:24:06] "[35m[1mPOST /start_stream HTTP/1.1[0m" 500 -
+2025-07-21 06:33:39,879 - __main__ - INFO - Flask service starting...
+2025-07-21 06:33:39,879 - __main__ - INFO - Models will be loaded on the first '/start_stream' request.
+2025-07-21 06:33:39,982 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://117.74.66.188:5000
+2025-07-21 06:33:39,982 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-21 06:33:43,452 - __main__ - INFO - Received request to start streaming to: rtmp://117.74.66.190:1935/dash/latentsync_video
+2025-07-21 06:33:43,452 - __main__ - INFO - Acquired model lock. Loading models...
+2025-07-21 06:33:43,471 - __main__ - INFO - Configuration loaded from: configs/unet/second_stage.yaml
+2025-07-21 06:33:53,874 - __main__ - INFO - xformers enabled.
+2025-07-21 06:33:53,915 - __main__ - INFO - All models loaded and pipeline created successfully.
+2025-07-21 06:33:53,915 - LiveStreamingManager - INFO - LiveStreamingManager instance created.
+2025-07-21 06:33:53,915 - LiveStreamingManager - INFO - Starting Live Streaming Manager...
+2025-07-21 06:33:53,916 - LiveStreamingManager - INFO - Task processor loop started.
+2025-07-21 06:33:53,917 - LiveStreamingManager - INFO - Streamer loop started.
+2025-07-21 06:33:53,917 - LiveStreamingManager - INFO - Manager started. Streaming to rtmp://117.74.66.190:1935/dash/latentsync_video. Ready for tasks.
+2025-07-21 06:33:53,917 - __main__ - INFO - Live streaming manager started successfully.
+2025-07-21 06:33:53,918 - werkzeug - INFO - 127.0.0.1 - - [21/Jul/2025 06:33:53] "POST /start_stream HTTP/1.1" 200 -
+2025-07-21 06:33:53,918 - LiveStreamingManager - INFO - Starting FFmpeg with command: ffmpeg -y -f rawvideo -vcodec rawvideo -pix_fmt rgb24 -s 512x512 -r 25 -i /tmp/video_fifo_2070572 -c:v libx264 -pix_fmt yuv420p -preset veryfast -f flv rtmp://117.74.66.190:1935/dash/latentsync_video
+2025-07-21 06:33:53,990 - LiveStreamingManager - ERROR - FFmpeg process closed unexpectedly. Stopping streamer.
+2025-07-21 06:33:53,990 - LiveStreamingManager - INFO - Stopping FFmpeg...
+2025-07-21 06:33:53,990 - LiveStreamingManager - INFO - Streamer loop finished.
+2025-07-21 07:01:35,868 - werkzeug - ERROR - 178.159.37.112 - - [21/Jul/2025 07:01:35] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+2025-07-21 07:01:35,869 - werkzeug - INFO - 178.159.37.112 - - [21/Jul/2025 07:01:35] "[35m[1m\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+2025-07-21 07:17:33,796 - __main__ - INFO - Flask service starting...
+2025-07-21 07:17:33,796 - __main__ - INFO - Models will be loaded on the first '/start_stream' request.
+2025-07-21 07:17:34,079 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://117.74.66.188:5000
+2025-07-21 07:17:34,079 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-21 07:17:38,622 - __main__ - INFO - Received request to start streaming to: rtmp://117.74.66.190:1935/dash/latentsync_video
+2025-07-21 07:17:38,623 - __main__ - INFO - Acquired model lock. Loading models...
+2025-07-21 07:17:38,641 - __main__ - INFO - Configuration loaded from: configs/unet/second_stage.yaml
+2025-07-21 07:17:49,009 - __main__ - INFO - xformers enabled.
+2025-07-21 07:17:49,051 - __main__ - INFO - All models loaded and pipeline created successfully.
+2025-07-21 07:17:49,051 - LiveStreamingManager - INFO - LiveStreamingManager instance created.
+2025-07-21 07:17:49,051 - LiveStreamingManager - INFO - Starting Live Streaming Manager...
+2025-07-21 07:17:49,052 - LiveStreamingManager - INFO - Task processor loop started.
+2025-07-21 07:17:49,052 - LiveStreamingManager - INFO - Streamer loop started.
+2025-07-21 07:17:49,053 - LiveStreamingManager - INFO - Manager started. Streaming to rtmp://117.74.66.190:1935/dash/latentsync_video. Ready for tasks.
+2025-07-21 07:17:49,053 - __main__ - INFO - Live streaming manager started successfully.
+2025-07-21 07:17:49,054 - werkzeug - INFO - 127.0.0.1 - - [21/Jul/2025 07:17:49] "POST /start_stream HTTP/1.1" 200 -
+2025-07-21 07:17:49,054 - LiveStreamingManager - INFO - Starting FFmpeg with command: ffmpeg -y -hide_banner -loglevel error -f rawvideo -vcodec rawvideo -pix_fmt rgb24 -s 512x512 -r 25 -i /tmp/video_fifo_2105004 -f s16le -ar 16000 -ac 1 -i /tmp/audio_fifo_2105004 -c:v libx264 -pix_fmt yuv420p -preset veryfast -tune zerolatency -c:a aac -b:a 96k -ar 16000 -f flv rtmp://117.74.66.190:1935/dash/latentsync_video
+2025-07-21 07:22:08,038 - __main__ - INFO - Flask service starting...
+2025-07-21 07:22:08,038 - __main__ - INFO - Models will be loaded on the first '/start_stream' request.
+2025-07-21 07:22:08,269 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://117.74.66.188:5000
+2025-07-21 07:22:08,269 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-21 07:22:12,951 - __main__ - INFO - Received request to start streaming to: rtmp://117.74.66.190:1935/dash/latentsync_video
+2025-07-21 07:22:12,951 - __main__ - INFO - Acquired model lock. Loading models...
+2025-07-21 07:22:12,968 - __main__ - INFO - Configuration loaded from: configs/unet/second_stage.yaml
+2025-07-21 07:22:22,481 - __main__ - INFO - xformers enabled.
+2025-07-21 07:22:22,520 - __main__ - INFO - All models loaded and pipeline created successfully.
+2025-07-21 07:22:22,521 - LiveStreamingManager - INFO - LiveStreamingManager instance created.
+2025-07-21 07:22:22,521 - LiveStreamingManager - INFO - Starting Live Streaming Manager...
+2025-07-21 07:22:22,521 - LiveStreamingManager - INFO - Task processor loop started.
+2025-07-21 07:22:22,521 - LiveStreamingManager - INFO - Streamer loop started.
+2025-07-21 07:22:22,521 - LiveStreamingManager - INFO - Manager started. Streaming to rtmp://117.74.66.190:1935/dash/latentsync_video. Ready for tasks.
+2025-07-21 07:22:22,522 - __main__ - INFO - Live streaming manager started successfully.
+2025-07-21 07:22:22,522 - werkzeug - INFO - 127.0.0.1 - - [21/Jul/2025 07:22:22] "POST /start_stream HTTP/1.1" 200 -
+2025-07-21 07:22:22,523 - LiveStreamingManager - INFO - Starting FFmpeg with command: ffmpeg -y -hide_banner -loglevel error -f rawvideo -vcodec rawvideo -pix_fmt rgb24 -s 512x512 -r 25 -i /tmp/video_fifo_2108692 -f s16le -ar 16000 -ac 1 -i /tmp/audio_fifo_2108692 -c:v libx264 -pix_fmt yuv420p -preset veryfast -tune zerolatency -c:a aac -b:a 96k -ar 16000 -f flv rtmp://117.74.66.190:1935/dash/latentsync_video
+2025-07-21 07:23:57,125 - werkzeug - INFO - 127.0.0.1 - - [21/Jul/2025 07:23:57] "[31m[1mPOST /start_stream HTTP/1.1[0m" 400 -
+2025-07-21 07:24:28,860 - __main__ - INFO - Flask service starting...
+2025-07-21 07:24:28,860 - __main__ - INFO - Models will be loaded on the first '/start_stream' request.
+2025-07-21 07:24:28,988 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://117.74.66.188:5000
+2025-07-21 07:24:28,988 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-21 07:24:48,561 - __main__ - INFO - Received request to start streaming to: rtmp://117.74.66.188:1935/dash/latentsync_video
+2025-07-21 07:24:48,561 - __main__ - INFO - Acquired model lock. Loading models...
+2025-07-21 07:24:48,580 - __main__ - INFO - Configuration loaded from: configs/unet/second_stage.yaml
+2025-07-21 07:24:58,138 - __main__ - INFO - xformers enabled.
+2025-07-21 07:24:58,178 - __main__ - INFO - All models loaded and pipeline created successfully.
+2025-07-21 07:24:58,178 - LiveStreamingManager - INFO - LiveStreamingManager instance created.
+2025-07-21 07:24:58,178 - LiveStreamingManager - INFO - Starting Live Streaming Manager...
+2025-07-21 07:24:58,179 - LiveStreamingManager - INFO - Task processor loop started.
+2025-07-21 07:24:58,179 - LiveStreamingManager - INFO - Streamer loop started.
+2025-07-21 07:24:58,179 - LiveStreamingManager - INFO - Manager started. Streaming to rtmp://117.74.66.188:1935/dash/latentsync_video. Ready for tasks.
+2025-07-21 07:24:58,179 - __main__ - INFO - Live streaming manager started successfully.
+2025-07-21 07:24:58,180 - werkzeug - INFO - 127.0.0.1 - - [21/Jul/2025 07:24:58] "POST /start_stream HTTP/1.1" 200 -
+2025-07-21 07:24:58,181 - LiveStreamingManager - INFO - Starting FFmpeg with command: ffmpeg -y -hide_banner -loglevel error -f rawvideo -vcodec rawvideo -pix_fmt rgb24 -s 512x512 -r 25 -i /tmp/video_fifo_2110715 -f s16le -ar 16000 -ac 1 -i /tmp/audio_fifo_2110715 -c:v libx264 -pix_fmt yuv420p -preset veryfast -tune zerolatency -c:a aac -b:a 96k -ar 16000 -f flv rtmp://117.74.66.188:1935/dash/latentsync_video
+2025-07-21 07:28:10,693 - werkzeug - INFO - 127.0.0.1 - - [21/Jul/2025 07:28:10] "[31m[1mPOST /start_stream HTTP/1.1[0m" 400 -
+2025-07-21 07:28:28,972 - __main__ - INFO - Flask service starting...
+2025-07-21 07:28:28,972 - __main__ - INFO - Models will be loaded on the first '/start_stream' request.
+2025-07-21 07:28:29,054 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://117.74.66.188:5000
+2025-07-21 07:28:29,054 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-21 07:28:34,466 - __main__ - INFO - Received request to start streaming to: rtmp://127.0.0.1:1935/dash/latentsync_video
+2025-07-21 07:28:34,467 - __main__ - INFO - Acquired model lock. Loading models...
+2025-07-21 07:28:34,485 - __main__ - INFO - Configuration loaded from: configs/unet/second_stage.yaml
+2025-07-21 07:28:44,069 - __main__ - INFO - xformers enabled.
+2025-07-21 07:28:44,099 - __main__ - INFO - All models loaded and pipeline created successfully.
+2025-07-21 07:28:44,099 - LiveStreamingManager - INFO - LiveStreamingManager instance created.
+2025-07-21 07:28:44,099 - LiveStreamingManager - INFO - Starting Live Streaming Manager...
+2025-07-21 07:28:44,100 - LiveStreamingManager - INFO - Task processor loop started.
+2025-07-21 07:28:44,101 - LiveStreamingManager - INFO - Streamer loop started.
+2025-07-21 07:28:44,101 - LiveStreamingManager - INFO - Manager started. Streaming to rtmp://127.0.0.1:1935/dash/latentsync_video. Ready for tasks.
+2025-07-21 07:28:44,101 - __main__ - INFO - Live streaming manager started successfully.
+2025-07-21 07:28:44,102 - werkzeug - INFO - 127.0.0.1 - - [21/Jul/2025 07:28:44] "POST /start_stream HTTP/1.1" 200 -
+2025-07-21 07:28:44,102 - LiveStreamingManager - INFO - Starting FFmpeg with command: ffmpeg -y -hide_banner -loglevel error -f rawvideo -vcodec rawvideo -pix_fmt rgb24 -s 512x512 -r 25 -i /tmp/video_fifo_2114844 -f s16le -ar 16000 -ac 1 -i /tmp/audio_fifo_2114844 -c:v libx264 -pix_fmt yuv420p -preset veryfast -tune zerolatency -c:a aac -b:a 96k -ar 16000 -f flv rtmp://127.0.0.1:1935/dash/latentsync_video
+2025-07-21 07:54:32,686 - __main__ - INFO - Flask service starting...
+2025-07-21 07:54:32,686 - __main__ - INFO - Models will be loaded on the first '/start_stream' request.
+2025-07-21 07:54:32,819 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://117.74.66.188:5000
+2025-07-21 07:54:32,819 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-21 07:54:37,267 - __main__ - INFO - Received request to start streaming to: rtmp://127.0.0.1:1935/dash/latentsync_video
+2025-07-21 07:54:37,268 - __main__ - INFO - Acquired model lock. Loading models...
+2025-07-21 07:54:37,286 - __main__ - INFO - Configuration loaded from: configs/unet/second_stage.yaml
+2025-07-21 07:54:47,469 - __main__ - INFO - xformers enabled.
+2025-07-21 07:54:47,508 - __main__ - INFO - All models loaded and pipeline created successfully.
+2025-07-21 07:54:47,509 - LiveStreamingManager - INFO - LiveStreamingManager instance created.
+2025-07-21 07:54:47,509 - LiveStreamingManager - INFO - Starting Live Streaming Manager...
+2025-07-21 07:54:47,509 - LiveStreamingManager - INFO - Task processor loop started.
+2025-07-21 07:54:47,510 - LiveStreamingManager - INFO - Streamer loop started.
+2025-07-21 07:54:47,510 - LiveStreamingManager - INFO - Manager started. Streaming to rtmp://127.0.0.1:1935/dash/latentsync_video. Ready for tasks.
+2025-07-21 07:54:47,510 - __main__ - INFO - Live streaming manager started successfully.
+2025-07-21 07:54:47,511 - werkzeug - INFO - 127.0.0.1 - - [21/Jul/2025 07:54:47] "POST /start_stream HTTP/1.1" 200 -
+2025-07-21 07:54:47,511 - LiveStreamingManager - INFO - Starting FFmpeg with command: ffmpeg -y -re -f rawvideo -pix_fmt rgb24 -s 512x512 -r 25 -i /tmp/video_fifo_2135540 -f s16le -ar 16000 -ac 1 -i /tmp/audio_fifo_2135540 -c:v libx264 -pix_fmt yuv420p -preset veryfast -tune zerolatency -c:a aac -b:a 96k -f flv rtmp://127.0.0.1:1935/dash/latentsync_video
+2025-07-21 07:54:47,542 - LiveStreamingManager - ERROR - [FFMPEG]: ffmpeg version 7.1.1 Copyright (c) 2000-2025 the FFmpeg developers
+2025-07-21 07:54:47,542 - LiveStreamingManager - ERROR - [FFMPEG]: built with gcc 13.3.0 (conda-forge gcc 13.3.0-2)
+2025-07-21 07:54:47,542 - LiveStreamingManager - ERROR - [FFMPEG]: configuration: --prefix=/data0/anaconda3/envs/latentsync --cc=/home/conda/feedstock_root/build_artifacts/ffmpeg_1748704110088/_build_env/bin/x86_64-conda-linux-gnu-cc --cxx=/home/conda/feedstock_root/build_artifacts/ffmpeg_1748704110088/_build_env/bin/x86_64-conda-linux-gnu-c++ --nm=/home/conda/feedstock_root/build_artifacts/ffmpeg_1748704110088/_build_env/bin/x86_64-conda-linux-gnu-nm --ar=/home/conda/feedstock_root/build_artifacts/ffmpeg_1748704110088/_build_env/bin/x86_64-conda-linux-gnu-ar --disable-doc --enable-openssl --enable-demuxer=dash --enable-hardcoded-tables --enable-libfreetype --enable-libharfbuzz --enable-libfontconfig --enable-libopenh264 --enable-libdav1d --disable-gnutls --enable-libvpx --enable-libass --enable-pthreads --enable-alsa --enable-libpulse --enable-vaapi --enable-libopenvino --enable-gpl --enable-libx264 --enable-libx265 --enable-libmp3lame --enable-libaom --enable-libsvtav1 --enable-libxml2 --enable-pic --enable-shared --disable-static --enable-version3 --enable-zlib --enable-libvorbis --enable-libopus --enable-librsvg --enable-ffplay --pkg-config=/home/conda/feedstock_root/build_artifacts/ffmpeg_1748704110088/_build_env/bin/pkg-config
+2025-07-21 07:54:47,542 - LiveStreamingManager - ERROR - [FFMPEG]: libavutil      59. 39.100 / 59. 39.100
+2025-07-21 07:54:47,542 - LiveStreamingManager - ERROR - [FFMPEG]: libavcodec     61. 19.101 / 61. 19.101
+2025-07-21 07:54:47,542 - LiveStreamingManager - ERROR - [FFMPEG]: libavformat    61.  7.100 / 61.  7.100
+2025-07-21 07:54:47,542 - LiveStreamingManager - ERROR - [FFMPEG]: libavdevice    61.  3.100 / 61.  3.100
+2025-07-21 07:54:47,542 - LiveStreamingManager - ERROR - [FFMPEG]: libavfilter    10.  4.100 / 10.  4.100
+2025-07-21 07:54:47,542 - LiveStreamingManager - ERROR - [FFMPEG]: libswscale      8.  3.100 /  8.  3.100
+2025-07-21 07:54:47,542 - LiveStreamingManager - ERROR - [FFMPEG]: libswresample   5.  3.100 /  5.  3.100
+2025-07-21 07:54:47,542 - LiveStreamingManager - ERROR - [FFMPEG]: libpostproc    58.  3.100 / 58.  3.100
+2025-07-21 07:57:32,124 - __main__ - INFO - Flask service starting...
+2025-07-21 07:57:32,124 - __main__ - INFO - Models will be loaded on the first '/start_stream' request.
+2025-07-21 07:57:32,210 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://117.74.66.188:5000
+2025-07-21 07:57:32,211 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-21 07:57:35,306 - __main__ - INFO - Received request to start streaming to: rtmp://117.74.66.188:1935/dash/latentsync_video
+2025-07-21 07:57:35,307 - __main__ - INFO - Acquired model lock. Loading models...
+2025-07-21 07:57:35,325 - __main__ - INFO - Configuration loaded from: configs/unet/second_stage.yaml
+2025-07-21 07:57:45,118 - __main__ - INFO - xformers enabled.
+2025-07-21 07:57:45,150 - __main__ - INFO - All models loaded and pipeline created successfully.
+2025-07-21 07:57:45,150 - LiveStreamingManager - INFO - LiveStreamingManager instance created.
+2025-07-21 07:57:45,151 - LiveStreamingManager - INFO - Starting Live Streaming Manager...
+2025-07-21 07:57:45,151 - LiveStreamingManager - INFO - Task processor loop started.
+2025-07-21 07:57:45,152 - LiveStreamingManager - INFO - Streamer loop started.
+2025-07-21 07:57:45,152 - LiveStreamingManager - INFO - Manager started. Streaming to rtmp://117.74.66.188:1935/dash/latentsync_video. Ready for tasks.
+2025-07-21 07:57:45,152 - __main__ - INFO - Live streaming manager started successfully.
+2025-07-21 07:57:45,153 - werkzeug - INFO - 127.0.0.1 - - [21/Jul/2025 07:57:45] "POST /start_stream HTTP/1.1" 200 -
+2025-07-21 07:57:45,153 - LiveStreamingManager - INFO - Starting FFmpeg with command: ffmpeg -y -re -f rawvideo -pix_fmt rgb24 -s 512x512 -r 25 -i /tmp/video_fifo_2138658 -f s16le -ar 16000 -ac 1 -i /tmp/audio_fifo_2138658 -c:v libx264 -pix_fmt yuv420p -preset veryfast -tune zerolatency -c:a aac -b:a 96k -f flv rtmp://117.74.66.188:1935/dash/latentsync_video
+2025-07-21 07:57:45,183 - LiveStreamingManager - ERROR - [FFMPEG]: ffmpeg version 7.1.1 Copyright (c) 2000-2025 the FFmpeg developers
+2025-07-21 07:57:45,183 - LiveStreamingManager - ERROR - [FFMPEG]: built with gcc 13.3.0 (conda-forge gcc 13.3.0-2)
+2025-07-21 07:57:45,183 - LiveStreamingManager - ERROR - [FFMPEG]: configuration: --prefix=/data0/anaconda3/envs/latentsync --cc=/home/conda/feedstock_root/build_artifacts/ffmpeg_1748704110088/_build_env/bin/x86_64-conda-linux-gnu-cc --cxx=/home/conda/feedstock_root/build_artifacts/ffmpeg_1748704110088/_build_env/bin/x86_64-conda-linux-gnu-c++ --nm=/home/conda/feedstock_root/build_artifacts/ffmpeg_1748704110088/_build_env/bin/x86_64-conda-linux-gnu-nm --ar=/home/conda/feedstock_root/build_artifacts/ffmpeg_1748704110088/_build_env/bin/x86_64-conda-linux-gnu-ar --disable-doc --enable-openssl --enable-demuxer=dash --enable-hardcoded-tables --enable-libfreetype --enable-libharfbuzz --enable-libfontconfig --enable-libopenh264 --enable-libdav1d --disable-gnutls --enable-libvpx --enable-libass --enable-pthreads --enable-alsa --enable-libpulse --enable-vaapi --enable-libopenvino --enable-gpl --enable-libx264 --enable-libx265 --enable-libmp3lame --enable-libaom --enable-libsvtav1 --enable-libxml2 --enable-pic --enable-shared --disable-static --enable-version3 --enable-zlib --enable-libvorbis --enable-libopus --enable-librsvg --enable-ffplay --pkg-config=/home/conda/feedstock_root/build_artifacts/ffmpeg_1748704110088/_build_env/bin/pkg-config
+2025-07-21 07:57:45,183 - LiveStreamingManager - ERROR - [FFMPEG]: libavutil      59. 39.100 / 59. 39.100
+2025-07-21 07:57:45,183 - LiveStreamingManager - ERROR - [FFMPEG]: libavcodec     61. 19.101 / 61. 19.101
+2025-07-21 07:57:45,183 - LiveStreamingManager - ERROR - [FFMPEG]: libavformat    61.  7.100 / 61.  7.100
+2025-07-21 07:57:45,183 - LiveStreamingManager - ERROR - [FFMPEG]: libavdevice    61.  3.100 / 61.  3.100
+2025-07-21 07:57:45,183 - LiveStreamingManager - ERROR - [FFMPEG]: libavfilter    10.  4.100 / 10.  4.100
+2025-07-21 07:57:45,183 - LiveStreamingManager - ERROR - [FFMPEG]: libswscale      8.  3.100 /  8.  3.100
+2025-07-21 07:57:45,183 - LiveStreamingManager - ERROR - [FFMPEG]: libswresample   5.  3.100 /  5.  3.100
+2025-07-21 07:57:45,183 - LiveStreamingManager - ERROR - [FFMPEG]: libpostproc    58.  3.100 / 58.  3.100
+2025-07-21 08:00:06,339 - __main__ - INFO - Flask service starting...
+2025-07-21 08:00:06,340 - __main__ - INFO - Models will be loaded on the first '/start_stream' request.
+2025-07-21 08:00:06,459 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://117.74.66.188:5000
+2025-07-21 08:00:06,459 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-21 08:06:28,379 - __main__ - INFO - Flask service starting...
+2025-07-21 08:06:28,379 - __main__ - INFO - Models will be loaded on the first '/start_stream' request.
+2025-07-21 08:06:28,456 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://117.74.66.188:5000
+2025-07-21 08:06:28,456 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-21 08:06:55,059 - __main__ - INFO - Received request to start streaming to: rtmp://117.74.66.188:1935/dash/latentsync_video
+2025-07-21 08:06:55,059 - __main__ - INFO - Acquired model lock. Loading models...
+2025-07-21 08:06:55,079 - __main__ - INFO - Configuration loaded from: configs/unet/second_stage.yaml
+2025-07-21 08:07:05,039 - __main__ - INFO - xformers enabled.
+2025-07-21 08:07:05,072 - __main__ - INFO - All models loaded and pipeline created successfully.
+2025-07-21 08:07:05,072 - LiveStreamingManager - INFO - LiveStreamingManager instance created.
+2025-07-21 08:07:05,072 - LiveStreamingManager - INFO - Starting Live Streaming Manager...
+2025-07-21 08:07:05,073 - LiveStreamingManager - INFO - Task processor loop started.
+2025-07-21 08:07:05,073 - LiveStreamingManager - INFO - Streamer loop started.
+2025-07-21 08:07:05,073 - LiveStreamingManager - INFO - Manager started. Streaming to rtmp://117.74.66.188:1935/dash/latentsync_video. Ready for tasks.
+2025-07-21 08:07:05,074 - __main__ - INFO - Live streaming manager started successfully.
+2025-07-21 08:07:05,074 - werkzeug - INFO - 127.0.0.1 - - [21/Jul/2025 08:07:05] "POST /start_stream HTTP/1.1" 200 -
+2025-07-21 08:07:05,075 - LiveStreamingManager - INFO - Starting FFmpeg with command: ffmpeg -y -hide_banner -re -f rawvideo -pix_fmt rgb24 -s 512x512 -r 25 -i /tmp/video_fifo_2146220 -f s16le -ar 16000 -ac 1 -i /tmp/audio_fifo_2146220 -c:v libx264 -pix_fmt yuv420p -preset veryfast -tune zerolatency -c:a aac -b:a 96k -f flv rtmp://117.74.66.188:1935/dash/latentsync_video
+2025-07-21 08:16:05,428 - __main__ - INFO - Flask service starting...
+2025-07-21 08:16:05,428 - __main__ - INFO - Models will be loaded on the first '/start_stream' request.
+2025-07-21 08:16:05,566 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://117.74.66.188:5000
+2025-07-21 08:16:05,566 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-21 08:16:11,146 - __main__ - INFO - Received request to start streaming to: rtmp://117.74.66.188:1935/dash/latentsync_video
+2025-07-21 08:16:11,146 - __main__ - INFO - Acquired model lock. Loading models...
+2025-07-21 08:16:11,159 - __main__ - INFO - Configuration loaded from: configs/unet/second_stage.yaml
+2025-07-21 08:16:20,610 - __main__ - INFO - xformers enabled.
+2025-07-21 08:16:20,640 - __main__ - INFO - All models loaded and pipeline created successfully.
+2025-07-21 08:16:20,640 - LiveStreamingManager - INFO - LiveStreamingManager instance created.
+2025-07-21 08:16:20,640 - LiveStreamingManager - INFO - Starting Live Streaming Manager...
+2025-07-21 08:16:20,641 - LiveStreamingManager - INFO - Task processor loop started.
+2025-07-21 08:16:20,641 - LiveStreamingManager - INFO - Streamer loop started.
+2025-07-21 08:16:20,641 - LiveStreamingManager - INFO - Manager started. Streaming to rtmp://117.74.66.188:1935/dash/latentsync_video. Ready for tasks.
+2025-07-21 08:16:20,642 - __main__ - INFO - Live streaming manager started successfully.
+2025-07-21 08:16:20,642 - werkzeug - INFO - 127.0.0.1 - - [21/Jul/2025 08:16:20] "POST /start_stream HTTP/1.1" 200 -
+2025-07-21 08:16:20,643 - LiveStreamingManager - INFO - Starting FFmpeg with command: ffmpeg -y -hide_banner -re -f rawvideo -pix_fmt rgb24 -s 512x512 -r 25 -i /tmp/video_fifo_2153172 -f s16le -ar 16000 -ac 1 -i /tmp/audio_fifo_2153172 -c:v libx264 -pix_fmt yuv420p -preset veryfast -tune zerolatency -c:a aac -b:a 96k -f flv rtmp://117.74.66.188:1935/dash/latentsync_video
+2025-07-21 08:16:20,644 - LiveStreamingManager - INFO - Pipe writer thread started.
+2025-07-21 08:24:25,367 - __main__ - INFO - Flask service starting...
+2025-07-21 08:24:25,367 - __main__ - INFO - Models will be loaded on the first '/start_stream' request.
+2025-07-21 08:24:25,458 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://117.74.66.188:5000
+2025-07-21 08:24:25,458 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-21 08:24:30,417 - __main__ - INFO - Received request to start streaming to: rtmp://117.74.66.188:1935/dash/latentsync_video
+2025-07-21 08:24:30,417 - __main__ - INFO - Acquired model lock. Loading models...
+2025-07-21 08:24:30,435 - __main__ - INFO - Configuration loaded from: configs/unet/second_stage.yaml
+2025-07-21 08:24:40,470 - __main__ - INFO - xformers enabled.
+2025-07-21 08:24:40,508 - __main__ - INFO - All models loaded and pipeline created successfully.
+2025-07-21 08:24:40,508 - LiveStreamingManager - INFO - LiveStreamingManager instance created.
+2025-07-21 08:24:40,508 - LiveStreamingManager - INFO - Starting Live Streaming Manager...
+2025-07-21 08:24:40,508 - LiveStreamingManager - INFO - Task processor loop started.
+2025-07-21 08:24:40,509 - LiveStreamingManager - INFO - Streamer loop started.
+2025-07-21 08:24:40,509 - LiveStreamingManager - INFO - Manager started. Streaming to rtmp://117.74.66.188:1935/dash/latentsync_video. Ready for tasks.
+2025-07-21 08:24:40,509 - __main__ - INFO - Live streaming manager started successfully.
+2025-07-21 08:24:40,510 - werkzeug - INFO - 127.0.0.1 - - [21/Jul/2025 08:24:40] "POST /start_stream HTTP/1.1" 200 -
+2025-07-21 08:24:40,510 - LiveStreamingManager - INFO - Starting FFmpeg with command: ffmpeg -y -hide_banner -re -f rawvideo -pix_fmt rgb24 -s 512x512 -r 25 -i /tmp/video_fifo_2154574 -f s16le -ar 16000 -ac 1 -i /tmp/audio_fifo_2154574 -c:v libx264 -pix_fmt yuv420p -preset veryfast -tune zerolatency -c:a aac -b:a 96k -f flv rtmp://117.74.66.188:1935/dash/latentsync_video
+2025-07-21 08:24:40,512 - LiveStreamingManager - INFO - Stateful pipe writer thread started.
+2025-07-21 08:25:09,746 - __main__ - INFO - Flask service starting...
+2025-07-21 08:25:09,746 - __main__ - INFO - Models will be loaded on the first '/start_stream' request.
+2025-07-21 08:25:09,831 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://117.74.66.188:5000
+2025-07-21 08:25:09,831 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-21 08:25:29,448 - __main__ - INFO - Received request to start streaming to: rtmp://117.74.66.188:1935/dash/latentsync_video
+2025-07-21 08:25:29,448 - __main__ - INFO - Acquired model lock. Loading models...
+2025-07-21 08:25:29,467 - __main__ - INFO - Configuration loaded from: configs/unet/second_stage.yaml
+2025-07-21 08:25:38,992 - __main__ - INFO - xformers enabled.
+2025-07-21 08:25:39,033 - __main__ - INFO - All models loaded and pipeline created successfully.
+2025-07-21 08:25:39,033 - LiveStreamingManager - INFO - LiveStreamingManager instance created.
+2025-07-21 08:25:39,033 - LiveStreamingManager - INFO - Starting Live Streaming Manager...
+2025-07-21 08:25:39,033 - LiveStreamingManager - INFO - Task processor loop started.
+2025-07-21 08:25:39,034 - LiveStreamingManager - INFO - Streamer loop started.
+2025-07-21 08:25:39,034 - LiveStreamingManager - INFO - Manager started. Streaming to rtmp://117.74.66.188:1935/dash/latentsync_video. Ready for tasks.
+2025-07-21 08:25:39,034 - __main__ - INFO - Live streaming manager started successfully.
+2025-07-21 08:25:39,035 - werkzeug - INFO - 127.0.0.1 - - [21/Jul/2025 08:25:39] "POST /start_stream HTTP/1.1" 200 -
+2025-07-21 08:25:39,035 - LiveStreamingManager - INFO - Starting FFmpeg with command: ffmpeg -y -re -f rawvideo -pix_fmt rgb24 -s 512x512 -r 25 -i /tmp/video_fifo_2155364 -f s16le -ar 16000 -ac 1 -i /tmp/audio_fifo_2155364 -c:v libx264 -pix_fmt yuv420p -preset veryfast -tune zerolatency -c:a aac -b:a 96k -f flv rtmp://117.74.66.188:1935/dash/latentsync_video
+2025-07-21 08:25:39,065 - LiveStreamingManager - ERROR - [FFMPEG]: ffmpeg version 7.1.1 Copyright (c) 2000-2025 the FFmpeg developers
+2025-07-21 08:25:39,065 - LiveStreamingManager - ERROR - [FFMPEG]: built with gcc 13.3.0 (conda-forge gcc 13.3.0-2)
+2025-07-21 08:25:39,065 - LiveStreamingManager - ERROR - [FFMPEG]: configuration: --prefix=/data0/anaconda3/envs/latentsync --cc=/home/conda/feedstock_root/build_artifacts/ffmpeg_1748704110088/_build_env/bin/x86_64-conda-linux-gnu-cc --cxx=/home/conda/feedstock_root/build_artifacts/ffmpeg_1748704110088/_build_env/bin/x86_64-conda-linux-gnu-c++ --nm=/home/conda/feedstock_root/build_artifacts/ffmpeg_1748704110088/_build_env/bin/x86_64-conda-linux-gnu-nm --ar=/home/conda/feedstock_root/build_artifacts/ffmpeg_1748704110088/_build_env/bin/x86_64-conda-linux-gnu-ar --disable-doc --enable-openssl --enable-demuxer=dash --enable-hardcoded-tables --enable-libfreetype --enable-libharfbuzz --enable-libfontconfig --enable-libopenh264 --enable-libdav1d --disable-gnutls --enable-libvpx --enable-libass --enable-pthreads --enable-alsa --enable-libpulse --enable-vaapi --enable-libopenvino --enable-gpl --enable-libx264 --enable-libx265 --enable-libmp3lame --enable-libaom --enable-libsvtav1 --enable-libxml2 --enable-pic --enable-shared --disable-static --enable-version3 --enable-zlib --enable-libvorbis --enable-libopus --enable-librsvg --enable-ffplay --pkg-config=/home/conda/feedstock_root/build_artifacts/ffmpeg_1748704110088/_build_env/bin/pkg-config
+2025-07-21 08:25:39,065 - LiveStreamingManager - ERROR - [FFMPEG]: libavutil      59. 39.100 / 59. 39.100
+2025-07-21 08:25:39,065 - LiveStreamingManager - ERROR - [FFMPEG]: libavcodec     61. 19.101 / 61. 19.101
+2025-07-21 08:25:39,065 - LiveStreamingManager - ERROR - [FFMPEG]: libavformat    61.  7.100 / 61.  7.100
+2025-07-21 08:25:39,065 - LiveStreamingManager - ERROR - [FFMPEG]: libavdevice    61.  3.100 / 61.  3.100
+2025-07-21 08:25:39,065 - LiveStreamingManager - ERROR - [FFMPEG]: libavfilter    10.  4.100 / 10.  4.100
+2025-07-21 08:25:39,065 - LiveStreamingManager - ERROR - [FFMPEG]: libswscale      8.  3.100 /  8.  3.100
+2025-07-21 08:25:39,065 - LiveStreamingManager - ERROR - [FFMPEG]: libswresample   5.  3.100 /  5.  3.100
+2025-07-21 08:25:39,065 - LiveStreamingManager - ERROR - [FFMPEG]: libpostproc    58.  3.100 / 58.  3.100
+2025-07-21 08:29:56,279 - werkzeug - ERROR - 45.142.193.4 - - [21/Jul/2025 08:29:56] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+2025-07-21 08:29:56,280 - werkzeug - INFO - 45.142.193.4 - - [21/Jul/2025 08:29:56] "[35m[1m\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+2025-07-21 08:31:07,210 - __main__ - INFO - Flask service starting...
+2025-07-21 08:31:07,210 - __main__ - INFO - Models will be loaded on the first '/start_stream' request.
+2025-07-21 08:31:07,290 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://117.74.66.188:5000
+2025-07-21 08:31:07,290 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-21 08:31:20,778 - __main__ - INFO - Received request to start streaming to: rtmp://127.0.0.1:1935/dash/latentsync_video
+2025-07-21 08:31:20,778 - __main__ - INFO - Acquired model lock. Loading models...
+2025-07-21 08:31:20,796 - __main__ - INFO - Configuration loaded from: configs/unet/second_stage.yaml
+2025-07-21 08:31:30,163 - __main__ - INFO - xformers enabled.
+2025-07-21 08:31:30,201 - __main__ - INFO - All models loaded and pipeline created successfully.
+2025-07-21 08:31:30,202 - LiveStreamingManager - INFO - LiveStreamingManager instance created.
+2025-07-21 08:31:30,202 - LiveStreamingManager - INFO - Starting Live Streaming Manager...
+2025-07-21 08:31:30,202 - LiveStreamingManager - INFO - Task processor loop started.
+2025-07-21 08:31:30,202 - LiveStreamingManager - INFO - Streamer loop started.
+2025-07-21 08:31:30,203 - LiveStreamingManager - INFO - Manager started. Streaming to rtmp://127.0.0.1:1935/dash/latentsync_video. Ready for tasks.
+2025-07-21 08:31:30,203 - __main__ - INFO - Live streaming manager started successfully.
+2025-07-21 08:31:30,204 - werkzeug - INFO - 127.0.0.1 - - [21/Jul/2025 08:31:30] "POST /start_stream HTTP/1.1" 200 -
+2025-07-21 08:31:30,204 - LiveStreamingManager - INFO - Starting FFmpeg with command: ffmpeg -y -re -f rawvideo -pix_fmt rgb24 -s 512x512 -r 25 -i /tmp/video_fifo_2156615 -f s16le -ar 16000 -ac 1 -i /tmp/audio_fifo_2156615 -c:v libx264 -pix_fmt yuv420p -preset veryfast -tune zerolatency -c:a aac -b:a 96k -f flv rtmp://127.0.0.1:1935/dash/latentsync_video
+2025-07-21 08:31:30,234 - LiveStreamingManager - ERROR - [FFMPEG]: ffmpeg version 7.1.1 Copyright (c) 2000-2025 the FFmpeg developers
+2025-07-21 08:31:30,234 - LiveStreamingManager - ERROR - [FFMPEG]: built with gcc 13.3.0 (conda-forge gcc 13.3.0-2)
+2025-07-21 08:31:30,234 - LiveStreamingManager - ERROR - [FFMPEG]: configuration: --prefix=/data0/anaconda3/envs/latentsync --cc=/home/conda/feedstock_root/build_artifacts/ffmpeg_1748704110088/_build_env/bin/x86_64-conda-linux-gnu-cc --cxx=/home/conda/feedstock_root/build_artifacts/ffmpeg_1748704110088/_build_env/bin/x86_64-conda-linux-gnu-c++ --nm=/home/conda/feedstock_root/build_artifacts/ffmpeg_1748704110088/_build_env/bin/x86_64-conda-linux-gnu-nm --ar=/home/conda/feedstock_root/build_artifacts/ffmpeg_1748704110088/_build_env/bin/x86_64-conda-linux-gnu-ar --disable-doc --enable-openssl --enable-demuxer=dash --enable-hardcoded-tables --enable-libfreetype --enable-libharfbuzz --enable-libfontconfig --enable-libopenh264 --enable-libdav1d --disable-gnutls --enable-libvpx --enable-libass --enable-pthreads --enable-alsa --enable-libpulse --enable-vaapi --enable-libopenvino --enable-gpl --enable-libx264 --enable-libx265 --enable-libmp3lame --enable-libaom --enable-libsvtav1 --enable-libxml2 --enable-pic --enable-shared --disable-static --enable-version3 --enable-zlib --enable-libvorbis --enable-libopus --enable-librsvg --enable-ffplay --pkg-config=/home/conda/feedstock_root/build_artifacts/ffmpeg_1748704110088/_build_env/bin/pkg-config
+2025-07-21 08:31:30,234 - LiveStreamingManager - ERROR - [FFMPEG]: libavutil      59. 39.100 / 59. 39.100
+2025-07-21 08:31:30,234 - LiveStreamingManager - ERROR - [FFMPEG]: libavcodec     61. 19.101 / 61. 19.101
+2025-07-21 08:31:30,234 - LiveStreamingManager - ERROR - [FFMPEG]: libavformat    61.  7.100 / 61.  7.100
+2025-07-21 08:31:30,234 - LiveStreamingManager - ERROR - [FFMPEG]: libavdevice    61.  3.100 / 61.  3.100
+2025-07-21 08:31:30,234 - LiveStreamingManager - ERROR - [FFMPEG]: libavfilter    10.  4.100 / 10.  4.100
+2025-07-21 08:31:30,234 - LiveStreamingManager - ERROR - [FFMPEG]: libswscale      8.  3.100 /  8.  3.100
+2025-07-21 08:31:30,234 - LiveStreamingManager - ERROR - [FFMPEG]: libswresample   5.  3.100 /  5.  3.100
+2025-07-21 08:31:30,234 - LiveStreamingManager - ERROR - [FFMPEG]: libpostproc    58.  3.100 / 58.  3.100
+2025-07-21 08:37:45,914 - __main__ - INFO - Flask service starting...
+2025-07-21 08:37:45,914 - __main__ - INFO - Models will be loaded on the first '/start_stream' request.
+2025-07-21 08:37:46,041 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://117.74.66.188:5000
+2025-07-21 08:37:46,041 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-21 08:38:12,935 - __main__ - INFO - Received request to start streaming to: rtmp://127.0.0.1:1935/dash/latentsync_video
+2025-07-21 08:38:12,936 - __main__ - INFO - Acquired model lock. Loading models...
+2025-07-21 08:38:12,954 - __main__ - INFO - Configuration loaded from: configs/unet/second_stage.yaml
+2025-07-21 08:38:22,348 - __main__ - INFO - xformers enabled.
+2025-07-21 08:38:22,386 - __main__ - INFO - All models loaded and pipeline created successfully.
+2025-07-21 08:38:22,386 - LiveStreamingManager - INFO - LiveStreamingManager instance created.
+2025-07-21 08:38:22,386 - LiveStreamingManager - INFO - Starting Live Streaming Manager...
+2025-07-21 08:38:22,387 - LiveStreamingManager - INFO - Task processor loop started.
+2025-07-21 08:38:22,388 - LiveStreamingManager - INFO - Streamer loop started.
+2025-07-21 08:38:22,388 - LiveStreamingManager - INFO - Manager started. Streaming to rtmp://127.0.0.1:1935/dash/latentsync_video. Ready for tasks.
+2025-07-21 08:38:22,388 - __main__ - INFO - Live streaming manager started successfully.
+2025-07-21 08:38:22,389 - werkzeug - INFO - 127.0.0.1 - - [21/Jul/2025 08:38:22] "POST /start_stream HTTP/1.1" 200 -
+2025-07-21 08:38:22,389 - LiveStreamingManager - INFO - Starting FFmpeg with command: ffmpeg -y -re -f rawvideo -pix_fmt rgb24 -s 512x512 -r 25 -i /tmp/video_fifo_2157650 -f s16le -ar 16000 -ac 1 -i /tmp/audio_fifo_2157650 -c:v libx264 -pix_fmt yuv420p -preset veryfast -tune zerolatency -c:a aac -b:a 96k -f flv rtmp://127.0.0.1:1935/dash/latentsync_video
+2025-07-21 08:38:22,418 - LiveStreamingManager - ERROR - [FFMPEG]: ffmpeg version 7.1.1 Copyright (c) 2000-2025 the FFmpeg developers
+2025-07-21 08:38:22,419 - LiveStreamingManager - ERROR - [FFMPEG]: built with gcc 13.3.0 (conda-forge gcc 13.3.0-2)
+2025-07-21 08:38:22,419 - LiveStreamingManager - ERROR - [FFMPEG]: configuration: --prefix=/data0/anaconda3/envs/latentsync --cc=/home/conda/feedstock_root/build_artifacts/ffmpeg_1748704110088/_build_env/bin/x86_64-conda-linux-gnu-cc --cxx=/home/conda/feedstock_root/build_artifacts/ffmpeg_1748704110088/_build_env/bin/x86_64-conda-linux-gnu-c++ --nm=/home/conda/feedstock_root/build_artifacts/ffmpeg_1748704110088/_build_env/bin/x86_64-conda-linux-gnu-nm --ar=/home/conda/feedstock_root/build_artifacts/ffmpeg_1748704110088/_build_env/bin/x86_64-conda-linux-gnu-ar --disable-doc --enable-openssl --enable-demuxer=dash --enable-hardcoded-tables --enable-libfreetype --enable-libharfbuzz --enable-libfontconfig --enable-libopenh264 --enable-libdav1d --disable-gnutls --enable-libvpx --enable-libass --enable-pthreads --enable-alsa --enable-libpulse --enable-vaapi --enable-libopenvino --enable-gpl --enable-libx264 --enable-libx265 --enable-libmp3lame --enable-libaom --enable-libsvtav1 --enable-libxml2 --enable-pic --enable-shared --disable-static --enable-version3 --enable-zlib --enable-libvorbis --enable-libopus --enable-librsvg --enable-ffplay --pkg-config=/home/conda/feedstock_root/build_artifacts/ffmpeg_1748704110088/_build_env/bin/pkg-config
+2025-07-21 08:38:22,419 - LiveStreamingManager - ERROR - [FFMPEG]: libavutil      59. 39.100 / 59. 39.100
+2025-07-21 08:38:22,419 - LiveStreamingManager - ERROR - [FFMPEG]: libavcodec     61. 19.101 / 61. 19.101
+2025-07-21 08:38:22,419 - LiveStreamingManager - ERROR - [FFMPEG]: libavformat    61.  7.100 / 61.  7.100
+2025-07-21 08:38:22,419 - LiveStreamingManager - ERROR - [FFMPEG]: libavdevice    61.  3.100 / 61.  3.100
+2025-07-21 08:38:22,419 - LiveStreamingManager - ERROR - [FFMPEG]: libavfilter    10.  4.100 / 10.  4.100
+2025-07-21 08:38:22,419 - LiveStreamingManager - ERROR - [FFMPEG]: libswscale      8.  3.100 /  8.  3.100
+2025-07-21 08:38:22,419 - LiveStreamingManager - ERROR - [FFMPEG]: libswresample   5.  3.100 /  5.  3.100
+2025-07-21 08:38:22,419 - LiveStreamingManager - ERROR - [FFMPEG]: libpostproc    58.  3.100 / 58.  3.100

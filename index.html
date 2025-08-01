@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+</head>
+<body>
+    <div id="video-container">
+        <video id="current-video" controls autoplay muted>
+            <source src="{{ url_for('video', filename='output_20250106_170307.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <script>
+        const videoElement = document.getElementById('current-video');
+
+        // 取消静音
+        videoElement.addEventListener('play', () => {
+            videoElement.muted = false;
+        });
+
+        // 循环播放
+        videoElement.addEventListener('ended', () => {
+            videoElement.currentTime = 0; // 将视频时间重置为开始
+            videoElement.play(); // 重新播放视频
+        });
+    </script>
+</body>
+</html>
