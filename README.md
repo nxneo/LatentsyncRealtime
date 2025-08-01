@@ -99,10 +99,4 @@ curl -X POST \
 *   **[ ] 实时对话能力**: 对接大型语言模型 (LLM) API，如 GPT、ChatGLM 或本地模型，实现与数字人的实时语音对话。
 *   **[ ] 移动端 Demo**: 开发一个手机 App，展示并与此后端服务进行交互，提供更直观的用户体验。
 
-我们欢迎社区的贡献者加入我们，共同实现这些目标！
-
 ---
-
-## 许可证 (License)
-
-This project is licensed under the Apache 2.0 License. See the [LICENSE](LICENSE) file for details.
