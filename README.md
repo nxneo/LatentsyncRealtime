@@ -60,6 +60,23 @@ This project provides a production-ready, real-time inference server based on **
 
 ### 1. 环境与依赖安装
 请首先参考官方 [LatentSync GitHub](https://github.com/bytedance/LatentSync) 项目的指引，完成环境的配置和所有依赖的安装。
+或者参考如下步骤：
+# Create a new conda environment
+conda create -y -n latentsync python=3.10.13
+conda activate latentsync
+
+# Install ffmpeg
+conda install -y -c conda-forge ffmpeg
+
+# Python dependencies
+pip install -r requirements.txt
+
+# OpenCV dependencies
+sudo apt -y install libgl1
+
+# Download the checkpoints required for inference from HuggingFace
+huggingface-cli download ByteDance/LatentSync-1.6 whisper/tiny.pt --local-dir checkpoints
+huggingface-cli download ByteDance/LatentSync-1.6 latentsync_unet.pt --local-dir checkpoints
 
 ### 2. 模型下载与存放
 从 [LatentSync Hugging Face](https://huggingface.co/ByteDance/LatentSync) 仓库下载模型文件。**请务必选择并下载 1.0 版本对应的模型**，并按照官方项目的目录结构要求存放它们。
