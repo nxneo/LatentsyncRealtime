@@ -117,3 +117,7 @@ curl -X POST \
 *   **[ ] 移动端 Demo**: 开发一个手机 App，展示并与此后端服务进行交互，提供更直观的用户体验。
 
 ---
+## 作者 (Author)
+
+- **[Yingjie Zhang](https://github.com/nxneo)**
+- nxoor2022@gmail.com
