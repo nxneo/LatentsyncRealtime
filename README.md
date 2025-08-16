@@ -118,6 +118,4 @@ curl -X POST \
 
 ---
 ## 作者 (Author)
-
-- **[Yingjie Zhang](https://github.com/nxneo)**
 - nxoor2022@gmail.com
